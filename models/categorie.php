@@ -1,9 +1,9 @@
 <?php
 
-class categorie {
+class Categorie {
     public $nome;
 
-    function __constructor ($_nome_animali) {
+    function __construct ($_nome_animali) {
         $this->nome = $_nome_animali;
     }
 }
