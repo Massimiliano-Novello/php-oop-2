@@ -8,7 +8,7 @@ class accessori extends prodotti {
 
     function __construct ($_nome, $_prezzo, $_categorie, $_immagine = "index.jpg", $_materiali, $_dimensioni) {
         parent:: __construct ($_nome, $_prezzo, $_categorie, $_immagine);
-        $this->materiali = $_materiali;
+        $this->materiale = $_materiali;
         $this->dimensioni = $_dimensioni;
     }
 }
