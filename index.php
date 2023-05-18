@@ -45,19 +45,17 @@ $prodotti = [
         <div class="row">
             <?php 
             foreach ($prodotti as $item) {
-                if ($item->categorie->nome == 'cane') {
             ?>
-            <div class="col-3">
+            <div class="col">
                 <div class="card">
-                    <img class="image" src="<?php echo $item->immagine ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo $item->immagine ?>" class="card-img-top image" alt="">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item->nome ?></h5>
                         <p class="card-text"><?php echo $item->prezzo ?></p>
-                        <p class="card-text"><?php echo $item->$_ingredienti ?></p>
+                        <p class="card-text"><?php echo $item->categorie->nome ?></p>
                     </div>
                 </div>
             <?php
-                }
             }
             ?>
             </div>
