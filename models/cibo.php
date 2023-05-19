@@ -6,7 +6,7 @@ class cibo extends prodotti {
     public $peso;
 
 
-    public function __construct ($_nome, $_prezzo, $_categorie, $_immagine = "index.jpg", $_ingredienti, $_peso) {
+    public function __construct ($_nome, $_prezzo, $_categorie, $_ingredienti, $_peso,  $_immagine = "index.jpg") {
         parent:: __construct ($_nome, $_prezzo, $_categorie, $_immagine);
         $this->ingredienti = $_ingredienti;
         $this->peso = $_peso;

@@ -4,7 +4,7 @@ require_once __DIR__ . "/categorie.php";
 
 class prodotti {
     public $nome;
-    private $prezzo;
+    public $prezzo;
     public $categorie;
     public $immagine;
 
@@ -15,14 +15,14 @@ class prodotti {
         $this->immagine = $_immagine;
     }
 
-    // public function getPrice($_prezzo) {
-    //     if (!is_int($_prezzo)) {
-    //         throw new Exception ("Il prezzo deve essere maggiore di 0");
+    public function getPrice() {
+        if ($this->prezzo < 1) {
+            throw new Exception ("Il prezzo deve essere maggiore di 0");
 
-    //     } elseif ($_prezzo > 1) {
-    //         $this->prezzo = $_prezzo;
-    //     }
-    // }
+        } elseif ($this->prezzo > 1) {
+            return $this->prezzo;
+        }
+    }
 
     // public function getPrice() {
     //     return $this->prezzo;
